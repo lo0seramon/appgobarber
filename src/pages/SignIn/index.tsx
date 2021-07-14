@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from 'react-native';
+import { Image, KeyboardAvoidingView, Platform, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import Input from '../../components/Input';
@@ -18,11 +18,17 @@ import {
 
 const SignIn: React.FC = () => {
   return (
-    <>
+    <KeyboardAvoidingView
+      enabled
+      style={{ flex: 1 }}
+      behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+    >
       <Container>
         <Image source={logoImg} />
 
-        <Title>Faça seu logon</Title>
+        <View>
+          <Title>Faça seu logon</Title>
+        </View>
 
         <Input name="email" icon="mail" placeholder="E-mail" />
         <Input name="password" icon="lock" placeholder="Senha" />
@@ -53,7 +59,7 @@ const SignIn: React.FC = () => {
 
         <CreateAccountText>CriarConta</CreateAccountText>
       </CreateAccount>
-    </>
+    </KeyboardAvoidingView>
   );
 };
 
