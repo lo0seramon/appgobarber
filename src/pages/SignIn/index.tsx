@@ -6,7 +6,7 @@ import Button from '../../components/Button';
 
 import logoImg from '../../assets/logo.png';
 
-import { Container, Title } from './style';
+import { Container, Title, ForgotPassword, ForgotPasswordText } from './style';
 
 const SignIn: React.FC = () => {
   return (
@@ -25,6 +25,10 @@ const SignIn: React.FC = () => {
       >
         Entrar
       </Button>
+
+      <ForgotPassword onPress={() => {}}>
+        <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
+      </ForgotPassword>
     </Container>
   );
 };
