@@ -67,7 +67,7 @@ const SignIn: React.FC = () => {
         >
           <Icon name="log-in" size={20} color="#ff9000" />
 
-          <CreateAccountText>CriarConta</CreateAccountText>
+          <CreateAccountText>Criar Conta</CreateAccountText>
         </CreateAccount>
       </ScrollView>
     </KeyboardAvoidingView>
