@@ -28,10 +28,8 @@ import {
 
 const SignIn: React.FC = () => {
   const navigation = useNavigation();
-
-  const passwordInputRef = useRef<TextInput>();
-
   const formRef = useRef<FormHandles>(null);
+  const passwordInputRef = useRef<TextInput>(null);
 
   const handleSignIn = useCallback((data: any) => {
     console.log(data);
